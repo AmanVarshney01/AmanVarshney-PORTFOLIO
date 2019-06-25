@@ -1,0 +1,230 @@
+.project-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    scroll-snap-align: start;
+}
+
+/*.icon-anime {*/
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background-color: transparent;*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.python-logo {*/
+    /*position: absolute;*/
+    /*top: 45%;*/
+    /*left: 1%;*/
+    /*animation: logo-animation 3s infinite linear;*/
+    /*width: 60px;*/
+    /*height: auto;*/
+/*}*/
+
+/*.javascript-logo {*/
+    /*position: absolute;*/
+    /*top: 55%;*/
+    /*right: 1%;*/
+    /*animation: logo-animation 3s infinite linear;*/
+    /*width: 60px;*/
+    /*height: auto;*/
+/*}*/
+
+/*.django-logo {*/
+    /*position: absolute;*/
+    /*top: 20%;*/
+    /*left: 1%;*/
+    /*animation: logo-animation 3s infinite linear;*/
+    /*width: 100px;*/
+/*}*/
+
+/*.html-logo {*/
+    /*position: absolute;*/
+    /*top: 75%;*/
+    /*left: -1%;*/
+    /*animation: logo-animation 3s infinite linear;*/
+    /*width: 60px;*/
+    /*height: auto;*/
+/*}*/
+
+/*.css-logo {*/
+    /*position: absolute;*/
+    /*top: 20%;*/
+    /*right: -3%;*/
+    /*animation: logo-animation 3s infinite linear;*/
+    /*width: 100px;*/
+    /*height: auto;*/
+/*}*/
+
+/*@keyframes logo-animation {*/
+    /*0% {*/
+        /*transform: none;*/
+    /*}*/
+    /*50% {*/
+        /*transform: translateY(15%);*/
+    /*}*/
+    /*100% {*/
+        /*transform: none;*/
+    /*}*/
+/*}*/
+
+.blur-filter {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left bottom, rgba(198, 206, 195, 0.2), rgba(200, 202, 202, 0.18));
+    filter: blur(1px);
+    background-size: cover;
+}
+
+.project-page {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90vh;
+    background: white;
+    box-shadow: 2px 2px 5px 0 #4f4f4f;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.project_headline {
+    margin: 20px auto;
+    font-size: 2.8rem;
+    color: #494b4e;
+    position: relative;
+}
+
+.project_headline::after {
+    position: absolute;
+    content: '';
+    top: 85%;
+    left: 25%;
+    /*right: auto;*/
+    width: 5rem;
+    height: 5px;
+    background-color: #a0a39c;
+    border-radius: 10px;
+}
+
+.project-group {
+    overflow-x: auto;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-panel-group {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projects-card {
+    flex-shrink: 0;
+    width: 30%;
+    background-color: rgba(185, 185, 185, 0.16);
+    text-align: center;
+    display: grid;
+    grid-template-rows: 4fr 2fr 1fr;
+}
+
+.project-card-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-container {
+    width: 100%;
+    height: 180px;
+    overflow: auto;
+}
+
+.img-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+.projects-card h2{
+    color: #5a5c5f;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-card p{
+
+}
+
+.projects-card a{
+    font-weight: normal;
+    font-size: large;
+    background-color: #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.moreinfo-button {
+    font-weight: normal;
+    font-size: medium;
+    color: white;
+    padding: 7px;
+    background-color: #bdc3c7;
+    cursor: pointer;
+}
+
+.projects-card a:hover, .projects-card button:hover {
+    color: grey;
+}
+
+
+.projects-panel {
+    display: none;
+    grid-template-columns: 1fr 3fr;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35vh;
+    background-color: #292a2a;
+}
+
+.panel-img {
+    height: 155px;
+    width: 100%;
+}
+
+.panel-sub-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 30px;
+}
+
+.panel-project-name {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+.panel-sub-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
