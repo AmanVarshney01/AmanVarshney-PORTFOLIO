@@ -72,29 +72,33 @@
             <div class="project_headline">Projects</div>
             <div class="project-group">
                 {% for i in projects %}
-                    <div class="projects-card">
-                        <div class="img-container">
-                            <img src="{{ i.project_image.url }}" alt="{{ i.project_name }} Image">
-                        </div>
-                        <div>
-                            <h2>{{ i.project_name }}</h2>
-                        </div>
-{#                        <p>{{ i.project_description }}</p>#}
-                        <div class="project-card-buttons">
-                            <a href="{{ i.project_link }}" target="_blank">OPEN</a>
-                            <a class="moreinfo-button">MORE INFO</a>
-                        </div>
-                    </div>
-                    <div class="projects-panel">
-                        <div class="panel-sub-grid">
-                            <div class="img-container panel-img">
+                    <div>
+                        <div class="projects-card">
+                            <div class="img-container">
                                 <img src="{{ i.project_image.url }}" alt="{{ i.project_name }} Image">
                             </div>
-                            <div class="panel-project-name"><h3>{{ i.project_name }}</h3></div>
-                        </div>
-                        <div class="panel-sub-grid-2">
-                            <div></div>
-                            <div></div>
+                            <div>
+                                <h2>{{ i.project_name }}</h2>
+                            </div>
+    {#                        <p>{{ i.project_description }}</p>#}
+                            <div class="project-card-buttons">
+                                <a href="{{ i.project_link }}" target="_blank">OPEN</a>
+                                <a class="moreinfo-button">MORE INFO</a>
+                            </div>
+                            <div>
+                                <div class="projects-panel">
+                                    <div class="panel-sub-grid">
+                                        <div class="img-container panel-img">
+                                            <img src="{{ i.project_image.url }}" alt="{{ i.project_name }} Image">
+                                        </div>
+                                        <div class="panel-project-name"><h3>{{ i.project_name }}</h3></div>
+                                    </div>
+                                    <div class="panel-sub-grid-2">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}

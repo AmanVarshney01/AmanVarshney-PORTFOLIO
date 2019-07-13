@@ -46,41 +46,32 @@ aman.addEventListener('mouseout', () => {
     popper.style.display = 'none'
 })
 
-const projectImage = document.querySelectorAll('.img-container')
-const projectCard = document.querySelectorAll('.projects-card')
+const projectImage = document.querySelector('.img-container')
+const projectCard = document.querySelector('.projects-card')
 let imgScrollId
 let imgScrollTopId
 
-projectCard.forEach((elem) => {
-	elem.addEventListener('mouseover', () => {
-		const imgScroll = () => {
-			projectImage.forEach((i) => {
-				i.scrollBy({
-					top: 100,
-					left: 0,
-					behavior: 'smooth',
-				})
-			})
-		}
-
-		imgScrollId = setInterval(imgScroll, 1000)
-		imgScrollTopId = setInterval(() => {
-			projectImage.forEach((i2) => {
-				i2.scrollTop = 0
-			})
-		}, 10000)
-	})
-})
-
-projectCard.foreach((elem) => {
-	elem.addEventListener('mouseout', () => {
-		clearInterval(imgScrollId)
-		clearInterval(imgScrollTopId)
-		projectImage.forEach((i2) => {
-			i2.scrollTop = 0
+projectCard.addEventListener('mouseover', () => {
+	const imgScroll = () => {
+		projectImage.scrollBy({
+			top: 100,
+			left: 0,
+			behavior: 'smooth',
 		})
-	})
+	}
+
+	imgScrollId = setInterval(imgScroll, 1000)
+	imgScrollTopId = setInterval(() => {
+		projectImage.scrollTop = 0
+	}, 10000)
 })
+
+projectCard.addEventListener('mouseout', () => {
+	clearInterval(imgScrollId)
+	clearInterval(imgScrollTopId)
+	projectImage.scrollTop = 0
+})
+
 
 let moreInfoButton = document.querySelector('.moreinfo-button')
 let projectPanel = document.querySelector('.projects-panel')
