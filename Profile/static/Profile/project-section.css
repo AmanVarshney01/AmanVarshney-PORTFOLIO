@@ -78,7 +78,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to left bottom, rgba(198, 206, 195, 0.2), rgba(200, 202, 202, 0.18));
+    background: linear-gradient(to left bottom, rgb(249, 96, 68), rgba(197, 24, 56, 0.59));
     filter: blur(1px);
     background-size: cover;
 }
@@ -145,7 +145,7 @@
 
 .img-container {
     width: 100%;
-    height: 180px;
+    height: 200px;
     overflow: auto;
 }
 
