@@ -78,22 +78,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to left bottom, rgb(249, 96, 68), rgba(197, 24, 56, 0.59));
+    background: linear-gradient(to left bottom, rgb(242, 97, 67), rgba(197, 24, 56, 0.59));
     filter: blur(1px);
     background-size: cover;
 }
 
 .project-page {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90vh;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96vh;
     background: white;
     box-shadow: 2px 2px 5px 0 #4f4f4f;
     z-index: 1;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr 2.5rem;
 }
 
 .project_headline {
@@ -106,7 +106,7 @@
 .project_headline::after {
     position: absolute;
     content: '';
-    top: 85%;
+    top: 105%;
     left: 25%;
     /*right: auto;*/
     width: 5rem;
@@ -116,11 +116,12 @@
 }
 
 .project-group {
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
     -webkit-overflow-scrolling: touch;
-    justify-content: space-evenly;
     align-items: center;
+    width: 98%;
+    margin: 0 auto;
 }
 
 .project-panel-group {
@@ -131,11 +132,14 @@
 
 .projects-card {
     flex-shrink: 0;
-    width: 30%;
+    width: 20rem;
     background-color: rgba(185, 185, 185, 0.16);
     text-align: center;
     display: grid;
     grid-template-rows: 4fr 2fr 1fr;
+    box-shadow: -1px 4px 7px -4px black;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .project-card-buttons {
@@ -145,7 +149,7 @@
 
 .img-container {
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: auto;
 }
 
@@ -227,4 +231,24 @@
 .panel-sub-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.project-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.project-nav button {
+    width: 70px;
+    height: 40px;
+    text-decoration: none;
+    background-color: #FD7272;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 2px;
+}
+
+.project-nav button:hover {
+    box-shadow: inset 0 2px 8px -4px black;
 }

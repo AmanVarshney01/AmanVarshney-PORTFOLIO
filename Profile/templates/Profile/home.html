@@ -37,25 +37,27 @@
 {% endblock %}
 
 {% block skill-section %}
+
     <section class="skills-section">
         <div class="skill-grid">
             <div class="skill">SkillSet</div>
-            <div class="skill-info-container">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque corporis cupiditate
-                dignissimos, distinctio ea eveniet expedita explicabo, facilis fugit labore magnam maxime natus
-                quasi quo rem repellat tempora voluptas maedmn vklev dfbk,. e. vo
-            </div>
+{#            <div class="skill-info-container">#}
+{#                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque corporis cupiditate#}
+{#                dignissimos, distinctio ea eveniet expedita explicabo, facilis fugit labore magnam maxime natus#}
+{#                quasi quo rem repellat tempora voluptas maedmn vklev dfbk,. e. vo#}
+{#            </div>#}
             <div class="skillset-group">
-            {% for i in skillset %}
-                <div class="card-design">
-                    <div class="card">
-                        <h2 class="skillname">{{ i.skillname }}</h2>
+                {% for i in skillset %}
+                    <div class="card-design">
+                        <div class="card">
+                            <h2 class="skillname">{{ i.skillname }}</h2>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </section>
+
 {% endblock %}
 
 {% block project-section %}
@@ -100,6 +102,10 @@
 {#                        </div>#}
                     </div>
                 {% endfor %}
+            </div>
+            <div class="project-nav">
+                <button class="project-nav-prev"><img src="{% static 'Profile/assets/prev_arrow.svg' %}" alt=""></button>
+                <button class="project-nav-next"><img src="{% static 'Profile/assets/next_arrow.svg' %}" alt=""></button>
             </div>
         </div>
     </section>

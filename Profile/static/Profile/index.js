@@ -47,14 +47,14 @@ aman.addEventListener('mouseout', () => {
 })
 
 const projectImage = document.querySelectorAll('.img-container')
-const projectCard = document.querySelector('.projects-card')
+// const projectCard = document.querySelector('.projects-card')
 let imgScrollId
 let imgScrollTopId
 
-projectImage.forEach( eachProjectCard => {
-    eachProjectCard.addEventListener('mouseover', () => {
+projectImage.forEach( eachProjectImage => {
+    eachProjectImage.addEventListener('mouseover', () => {
         const imgScroll = () => {
-            eachProjectCard.scrollBy({
+            eachProjectImage.scrollBy({
                 top: 100,
                 left: 0,
                 behavior: 'smooth',
@@ -63,14 +63,14 @@ projectImage.forEach( eachProjectCard => {
 
         imgScrollId = setInterval(imgScroll, 1000)
         imgScrollTopId = setInterval(() => {
-            eachProjectCard.scrollTop = 0
+            eachProjectImage.scrollTop = 0
         }, 10000)
     })
 
-    eachProjectCard.addEventListener('mouseout', () => {
+    eachProjectImage.addEventListener('mouseout', () => {
         clearInterval(imgScrollId)
         clearInterval(imgScrollTopId)
-        eachProjectCard.scrollTop = 0
+        eachProjectImage.scrollTop = 0
     })
 })
 
@@ -87,3 +87,44 @@ const moreInfoClick = () => {
 }
 moreInfoButton.addEventListener('click', moreInfoClick)
 
+const projectGroup = document.querySelector('.project-group')
+const projectNavPrev = document.querySelector('.project-nav-prev')
+const projectNavNext = document.querySelector('.project-nav-next')
+
+projectNavNext.addEventListener('click', () => {
+    projectGroup.scrollBy({
+        top: 0,
+        left: 350,
+        behavior: 'smooth',
+    })
+})
+
+projectNavPrev.addEventListener('click', () => {
+    projectGroup.scrollBy({
+        top: 0,
+        left: -350,
+        behavior: 'smooth',
+    })
+})
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector("nav").style.top = "0";
+        document.querySelector("nav").style.transition = "top 0.5s";
+    } else {
+        document.querySelector("nav").style.top = "-50px";
+        document.querySelector("nav").style.transition = "top 0.5s";
+    }
+
+    prevScrollpos = currentScrollPos;
+}
+
+if (projectGroup.children.length <= 3) {
+    projectGroup.style.justifyContent = 'space-evenly'
+    document.querySelector(".project-nav").style.display = 'none'
+} else {
+    projectGroup.style.justifyContent = 'none'
+}
