@@ -128,3 +128,7 @@ if (projectGroup.children.length <= 3) {
 } else {
     projectGroup.style.justifyContent = 'none'
 }
+
+if (projectGroup.children.length >= 2 && window.matchMedia("(max-width: 728px)").matches) {
+    document.querySelector(".project-nav").style.display = 'flex'
+}
