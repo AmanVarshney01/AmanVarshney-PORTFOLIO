@@ -2,50 +2,24 @@
 {% load static %}
 
 {% block profile-section %}
-    <header class="main-section">
-        <div class="roller">
-            <div class="scene">
-                <div class="box">
-                    <div class="side front">
-                        <img src="{% static 'Profile/assets/aman.jpg' %}" alt="Aman">
-                        <div class="popper">It's me</div>
-                    </div>
-                    <div class="side back"></div>
-                    <div class="side top"></div>
-                    <div class="side bottom"></div>
-                    <div class="side left"></div>
-                    <div class="side right"></div>
-                </div>
-            </div>
-            <div class="plain"></div>
-            <div class="dots">
-                <div class="dot fdot"></div>
-                <div class="dot sdot"></div>
-                <div class="dot tdot"></div>
-            </div>
-        </div>
-        <div class="nameplate">
-            <div class="namebox">
-                <h2 class="name">Aman Varshney</h2>
-                <h3>FullStack Developer </h3>
-            </div>
-        </div>
+    <header class="main-section" id="main-section">
+        <img class="bolt-animation" src="{% static 'Profile/assets/bolt.gif' %}" alt="">
+        <img class="name-logo" src="{% static 'Profile/assets/aman-logo.png' %}" alt="">
     </header>
     <nav>
+        <a href="#skill-section">SkillSet</a>
+        <a href="#project-section">Projects</a>
+        <a href="#about-section">About</a>
+        <a class="contact-button">Contact</a>
+        <a href="" class="blog-button">BLOG</a>
     </nav>
-
 {% endblock %}
 
 {% block skill-section %}
 
-    <section class="skills-section">
+    <section class="skills-section" id="skill-section">
         <div class="skill-grid">
             <div class="skill">SkillSet</div>
-{#            <div class="skill-info-container">#}
-{#                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque corporis cupiditate#}
-{#                dignissimos, distinctio ea eveniet expedita explicabo, facilis fugit labore magnam maxime natus#}
-{#                quasi quo rem repellat tempora voluptas maedmn vklev dfbk,. e. vo#}
-{#            </div>#}
             <div class="skillset-group">
                 {% for i in skillset %}
                     <div class="card-design">
@@ -61,15 +35,7 @@
 {% endblock %}
 
 {% block project-section %}
-    <section class="project-section">
-{#        <div class="icon-anime">#}
-{#            <img class="python-logo" src="{%  static 'Profile/assets/python-logo.png' %}" alt="Python-logo">#}
-{#            <img class="javascript-logo" src="{%  static 'Profile/assets/javascript-logo.png' %}" alt="javascript-logo">#}
-{#            <img class="django-logo" src="{%  static 'Profile/assets/django-logo.png' %}" alt="Django-logo">#}
-{#            <img class="html-logo" src="{%  static 'Profile/assets/html-logo.png' %}" alt="HTML-logo">#}
-{#            <img class="css-logo" src="{%  static 'Profile/assets/css-logo.svg' %}" alt="css-logo">#}
-{#        </div>#}
-        <div class="blur-filter"></div>
+    <section class="project-section" id="project-section">
         <div class="project-page">
             <div class="project_headline">Projects</div>
             <div class="project-group">
@@ -86,20 +52,6 @@
                             <a href="{{ i.project_link }}" target="_blank">OPEN</a>
                             <a class="moreinfo-button">MORE INFO</a>
                         </div>
-{#                        <div>#}
-{#                            <div class="projects-panel">#}
-{#                                <div class="panel-sub-grid">#}
-{#                                    <div class="img-container panel-img">#}
-{#                                        <img src="{{ i.project_image.url }}" alt="{{ i.project_name }} Image">#}
-{#                                    </div>#}
-{#                                    <div class="panel-project-name"><h3>{{ i.project_name }}</h3></div>#}
-{#                                </div>#}
-{#                                <div class="panel-sub-grid-2">#}
-{#                                    <div></div>#}
-{#                                    <div></div>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
                     </div>
                 {% endfor %}
             </div>
@@ -112,15 +64,34 @@
 {% endblock %}
 
 {% block about-section %}
-    <section class="about-section">
-        <div class="about-card">
-            <img src="{% static 'Profile/assets/aman.jpg' %}" alt="Aman Varshney">
+    <section class="about-section" id="about-section">
+        <div class="about-card-container">
+            <div class="about-card">
+                <div class="scene">
+                    <div class="box">
+                        <div class="side front">
+                            <img src="{% static 'Profile/assets/aman.jpg' %}" alt="Aman">
+                            <div class="popper">It's me</div>
+                        </div>
+                        <div class="side back"></div>
+                        <div class="side top"></div>
+                        <div class="side bottom"></div>
+                        <div class="side left"></div>
+                        <div class="side right"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="about-content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aut dolor dolore dolorum duc
-                imus eius eligendi enim exercitationem, explicabo maiores nam nihil nisi odit, officia o
-                mnis sapiente vero voluptas.</p>
+                imus eius eligendi enim exercitationem, explicabo maiores nam nihil nisi odit.</p>
+            <div class="about-sociallinks"></div>
         </div>
-        <div class="about-sociallinks"></div>
     </section>
+{% endblock %}
+
+{% block contact-section %}
+    <div>
+
+    </div>
 {% endblock %}

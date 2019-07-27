@@ -1,49 +1,49 @@
+
 const boxSpin = () => document.querySelector('.box').classList.add('spin')
-const plainAnime = () => document.querySelector('.plain').classList.add('plain-anime')
 
+let prevScrollpos = window.pageYOffset;
 
-window.onload = function() {
-    // ```Dot Animation```
-	document.querySelector('.fdot').style.backgroundColor = '#f1c40f'
-    window.setTimeout(function () {
-        document.querySelector('.sdot').style.backgroundColor = '#e67e22'
-    },200)
-    window.setTimeout(function () {
-        document.querySelector('.tdot').style.backgroundColor = '#3498db'
-    },400)
-    window.setTimeout(function () {
-        document.querySelector('.dots').style.display = 'none'
-    },600)
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
 
-    // ```Roll animation```
-    window.setTimeout(function () {
-        plainAnime()
-        window.setTimeout(function () {
-            boxSpin()
-        }, 1000)
-    }, 1100)
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector("nav").style.top = "0";
+        document.querySelector("nav").style.transition = "top 0.2s";
+    } else {
+        document.querySelector("nav").style.top = "-37px";
+        document.querySelector("nav").style.transition = "top 0.2s";
+    }
+
+    prevScrollpos = currentScrollPos;
+
+    if (window.scrollY > 1315) {
+        boxSpin()
+    }
 }
 
+
+
 document.querySelector('.box').addEventListener('transitionend', function() {
-    document.querySelector('.front img').style.boxShadow = ' 12px 13px 23px -9px black'
-    document.querySelector('.front img').style.transition = 'box-shadow 0.5s'
-    document.querySelector('.name').style.display = 'block'
-    document.querySelector('.name').style.animation = 'typing 2.5s steps(30, end), cursor .75s step-end infinite'
-    document.querySelector('.name').addEventListener('animationend', function() {
-        document.querySelector('.nameplate h3').style.display = 'block'
+    document.querySelectorAll('.side').forEach(eachSide => {
+        eachSide.style.border = 'none'
+        eachSide.style.backgroundColor = 'transparent'
     })
+    document.querySelector('.front img').style.boxShadow = '1px 5px 8px -4px black'
+    document.querySelector('.front img').style.border = '2px solid rgba(234, 181, 67, 0.76)'
+    document.querySelector('.front img').style.transition = 'box-shadow 0.5s'
 })
 
 let aman = document.querySelector('.front img ')
-let popper = document.querySelector('.popper')
+let amanPopper = document.querySelector('.popper')
+
+amanPopper.style.display = 'none'
 
 aman.addEventListener('mouseover', () => {
-    popper.style.display = 'block'
-
+    amanPopper.style.display = 'block'
 })
 
 aman.addEventListener('mouseout', () => {
-    popper.style.display = 'none'
+    amanPopper.style.display = 'none'
 })
 
 const projectImage = document.querySelectorAll('.img-container')
@@ -106,21 +106,6 @@ projectNavPrev.addEventListener('click', () => {
         behavior: 'smooth',
     })
 })
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector("nav").style.top = "0";
-        document.querySelector("nav").style.transition = "top 0.5s";
-    } else {
-        document.querySelector("nav").style.top = "-50px";
-        document.querySelector("nav").style.transition = "top 0.5s";
-    }
-
-    prevScrollpos = currentScrollPos;
-}
 
 if (projectGroup.children.length <= 3) {
     projectGroup.style.justifyContent = 'space-evenly'

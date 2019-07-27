@@ -13,38 +13,77 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f53b57;
+    background: #eb3b5a;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #d2dae2;
+    background: #f5f6fa;
 }
 
 
 nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     top: 0;
-    background: rgba(101, 202, 214, 0.61);
+    background: rgba(234, 181, 67, 0.76);
     position: sticky;
     z-index: 10;
     box-shadow: 0 5px 10px 0 #3a3a3a;
 }
 
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2C3A47;
+    cursor: pointer;
+}
+
+.blog-button {
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid #2C3A47;
+    color: rgb(234, 181, 67);
+    background-color: #2C3A47;
+}
+
 .main-section {
     width: 100%;
-    height: 92vh;
-    background-color: #252934;
-    border-bottom: 5px solid orangered;
+    height: 94vh;
+    /*background-color: #252934;*/
+    border-bottom: 5px solid #eb3b5a;
     position: relative;
 }
 
-.scene {
+.name-logo {
+    pointer-events: none;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 42%;
+    /*height: 92vh;*/
+}
+
+.bolt-animation {
+    border-bottom: 5px solid #eb3b5a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 94vh;
+    pointer-events: none;
+}
+
+.scene {
     perspective: 600px;
 }
 
@@ -59,9 +98,6 @@ nav {
 .side {
     position: absolute;
     border: 2px solid #252934;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
     background-color: #d1d8e0;
 }
@@ -70,12 +106,11 @@ nav {
     transform: rotateX(180deg) translateZ(50px);
     width: 200px;
     height: 300px;
-    background-color: #252934;
+    background-color: white;
 }
 
 
 .popper {
-    display: none;
     position: absolute;
     top: 90%;
     right: 0;
@@ -98,25 +133,25 @@ nav {
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(50px);
+    transform: rotateX(90deg) translateZ(150px);
     width: 200px;
     height: 100px;
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(150px);
     width: 200px;
     height: 100px;
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(50px);
+    transform: rotateY(-90deg) translateZ(100px);
     width: 100px;
     height: 300px;
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(150px);
+    transform: rotateY(90deg) translateZ(100px);
     width: 100px;
     height: 300px;
 }
@@ -124,81 +159,12 @@ nav {
 .front img {
     width: 100%;
     height: auto;
-    border: 2px solid #d1d8e0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .spin {
     transform: rotateX(180deg);
     transition: transform 3s;
-}
-
-.plain {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 200px;
-    background-color: pink;
-}
-
-.plain-anime {
-    width: 0;
-    transition: width 1s;
-}
-
-.dots {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    width: 80px;
-}
-
-.dot {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border: 2px solid white;
-    border-radius: 50%;
-}
-
-.nameplate {
-    color: white;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.namebox {
-    font-family: lato, Arial, serif;
-    text-align: center;
-}
-
-.name {
-    font-size: 2.5em;
-    overflow: hidden;
-    display: none;
-    border-right: .15em solid white;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .10em;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes cursor {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
-}
-
-.nameplate h3 {
-    display: none;
-    margin-top: 1em;
-    color: orangered;
 }

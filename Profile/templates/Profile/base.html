@@ -7,10 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aman Varshney</title>
+    <link rel="icon" href="{% static 'Profile/assets/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'Profile/assets/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'Profile/main-section.css' %}">
     <link rel="stylesheet" href="{% static 'Profile/skills-section.css' %}">
     <link rel="stylesheet" href="{% static 'Profile/project-section.css' %}">
     <link rel="stylesheet" href="{% static 'Profile/about-section.css' %}">
+    <link rel="stylesheet" href="{% static 'Profile/contact-section.css' %}">
 </head>
 <body>
     {% block profile-section %}
@@ -20,6 +23,8 @@
     {% block project-section %}
     {% endblock %}
     {% block about-section %}
+    {% endblock %}
+    {% block contact-section %}
     {% endblock %}
     <script type="text/javascript" src="{% static 'Profile/index.js' %}" ></script>
 </body>
