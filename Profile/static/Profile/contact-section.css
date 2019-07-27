@@ -1,0 +1,10 @@
+.contact-card {
+    width: 30rem;
+    height: 45vh;
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: none;
+    z-index: 10;
+}
