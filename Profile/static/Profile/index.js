@@ -24,10 +24,10 @@ window.onscroll = function() {
 const contactCard = document.querySelector('.contact-card')
 
 document.querySelector('.contact-button').addEventListener('click', () => {
-    if (contactCard.style.display === 'block') {
+    if (contactCard.style.display === 'grid') {
         contactCard.style.display = 'none'
     } else {
-        contactCard.style.display = 'block'
+        contactCard.style.display = 'grid'
     }
 })
 

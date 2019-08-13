@@ -29,7 +29,7 @@ nav {
     width: 100%;
     height: 6vh;
     top: 0;
-    background: rgba(234, 181, 67, 0.85);
+    background: rgba(234, 181, 67, 0.91);
     position: sticky;
     z-index: 10;
     box-shadow: 0 5px 10px 0 #3a3a3a;
@@ -81,90 +81,4 @@ nav a {
     width: 100%;
     height: 94vh;
     pointer-events: none;
-}
-
-.scene {
-    perspective: 600px;
-}
-
-.box {
-    position: relative;
-    width: 200px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: rotateZ(90deg);
-}
-
-.side {
-    position: absolute;
-    border: 2px solid #252934;
-    font-size: 30px;
-    background-color: #d1d8e0;
-}
-
-.front {
-    transform: rotateX(180deg) translateZ(50px);
-    width: 200px;
-    height: 300px;
-    background-color: white;
-}
-
-
-.popper {
-    position: absolute;
-    top: 90%;
-    right: 0;
-    left: 100%;
-    margin-left: 4px;
-    clip-path: polygon(18% 10%, 18% 0, 100% 0, 100% 100%, 18% 100%, 18% 30%, 9% 20%);
-    border-radius: 10px;
-    width: 100px;
-    background: #fde476;
-    color: black;
-    font-size: 1rem;
-    font-weight: bolder;
-    padding: 10px 15px 10px 35px;
-}
-
-.back {
-    transform: rotateX(0deg) translateZ(50px);
-    width: 200px;
-    height: 300px;
-}
-
-.top {
-    transform: rotateX(90deg) translateZ(150px);
-    width: 200px;
-    height: 100px;
-}
-
-.bottom {
-    transform: rotateX(-90deg) translateZ(150px);
-    width: 200px;
-    height: 100px;
-}
-
-.left {
-    transform: rotateY(-90deg) translateZ(100px);
-    width: 100px;
-    height: 300px;
-}
-
-.right {
-    transform: rotateY(90deg) translateZ(100px);
-    width: 100px;
-    height: 300px;
-}
-
-.front img {
-    width: 100%;
-    height: auto;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-
-.spin {
-    transform: rotateX(180deg);
-    transition: transform 3s;
 }

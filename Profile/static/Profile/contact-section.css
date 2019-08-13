@@ -4,7 +4,8 @@
     position: fixed;
     bottom: 0;
     right: 1%;
-    background-color: rgba(0, 0, 0, 0.71);
+    background-color: rgba(235, 59, 90, 0.71);
     display: none;
     z-index: 10;
+    grid-template-rows: 3fr 8fr 1fr;
 }

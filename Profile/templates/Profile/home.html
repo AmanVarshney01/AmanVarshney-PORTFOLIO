@@ -11,7 +11,7 @@
         <a href="#project-section">Projects</a>
         <a href="#about-section">About</a>
         <a class="contact-button">Contact</a>
-        <a href="" class="blog-button">BLOG</a>
+        <a href="{% url 'blog_home' %}" class="blog-button">BLOG</a>
     </nav>
 {% endblock %}
 
@@ -92,6 +92,8 @@
 
 {% block contact-section %}
     <div class="contact-card">
-
+        <input type="text">
+        <div></div>
+        <div></div>
     </div>
 {% endblock %}
