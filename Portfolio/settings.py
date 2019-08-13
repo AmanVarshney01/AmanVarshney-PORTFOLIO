@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import cloudinary
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't8^)2b3zx0_yicrri)f@l_pvcu_-fv&c3!tm#j7xx-brym#d()'
+SECRET_KEY = '7ac2b7cc5b51b0a9a05646b163a02fce812e17419c48ca24'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['amanvarshney.herokuapp.com']
 
 
 # Application definition
@@ -121,6 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 cloudinary.config(
@@ -128,3 +130,5 @@ cloudinary.config(
     api_key = '635458418928675',
     api_secret = 'dmhlaWmmL0I9X1Cys6Oqtv8Z64A',
 )
+
+django_heroku.settings(locals())
